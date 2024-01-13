@@ -6,6 +6,8 @@ import 'semantic-ui-css/semantic.min.css'
 import CreateMail from './components/CreateMail';
 import Mail from './components/Mail';
 import CreateRecipient from './components/CreateRecipient';
+import Recipient from './components/Recipient';
+import Welcome from './components/Welcome';
 
 function App() {
   return (
@@ -13,9 +15,11 @@ function App() {
       <header className="App-header">
       <Router>
           <Routes>
-          <Route path="/" element={<CreateMail />} />
+          <Route path="/" element={<Welcome />} />
+          <Route path="/CreateMail" element={<CreateMail />} />
           <Route path="/Mail" element={<Mail />} /> 
           <Route path="/CreateRecipient" element={<CreateRecipient />} />     
+          <Route path="/Recipient" element={<Recipient />} />
         </Routes>
       </Router>
       </header>

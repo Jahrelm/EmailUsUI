@@ -5,9 +5,11 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Home</Link></li>
+        <li><Link to="/">Welcome</Link></li>
+        <li><Link to="/CreateMail">Create Mail</Link></li>
         <li><Link to="/Mail">Mail</Link></li>
-        <li><Link to="/CreateRecipient"></Link></li>
+        <li><Link to="/CreateRecipient">Create Recipient</Link></li>
+        <li><Link to="/Recipient">Recipient</Link></li>
       </ul>
     </nav>
   );

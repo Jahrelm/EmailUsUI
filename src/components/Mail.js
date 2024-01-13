@@ -3,7 +3,7 @@ import { Sidebar, Menu, Icon, Input, Grid, Card, Header } from 'semantic-ui-reac
 import axios from 'axios';
 
  
-const Mail = () => {
+const Mail = () => { 
   const [mails, setMails] = useState([]);
   const [visible] = useState(true);
   const [activeItem, setActiveItem] = useState('inbox');

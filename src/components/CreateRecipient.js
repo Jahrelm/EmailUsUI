@@ -32,22 +32,20 @@ const CreateRecipient = () => {
     });
   };
 
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
+  const handleCheckboxChange = (e,{name, checked}) => {
     setRecipientData({
       ...recipientData,
       [name]: checked,
     });
   };
 
-const handleDropdownChange = (e) => {
-    const {name, value} = e.target;
+  const handleDropdownChange = (e, { name, value }) => {
     setRecipientData({
-        ...recipientData,
-        [name]: value,
-
+      ...recipientData,
+      [name]: value,
     });
-};
+  };
+  
  
   const postRecipientRequest = async (e) => {
     e.preventDefault();
@@ -111,21 +109,22 @@ const handleDropdownChange = (e) => {
                 />
               </Form.Field>
               <Form.Field>
-                <Checkbox
-                  label="Active"
-                  name="isActive"
-                  checked={recipientData.isActive}
-                  onChange={handleCheckboxChange}
-                />
-              </Form.Field>
-              <Form.Field>
-                <Checkbox
-                  label="Opted In"
-                  name="isOptedIn"
-                  checked={recipientData.isOptedIn}
-                  onChange={handleCheckboxChange}
-                />
-              </Form.Field>
+                  <Checkbox
+                    label="Active"
+                    name="isActive"
+                    checked={recipientData.isActive}
+                    onChange={handleCheckboxChange}
+                  />
+                </Form.Field>
+                <Form.Field>
+                  <Checkbox
+                    label="Opted In"
+                    name="isOptedIn"
+                    checked={recipientData.isOptedIn}
+                    onChange={handleCheckboxChange}
+                  />
+                </Form.Field>
+
               <Form.Field>
                 <label>Group</label>
                 <Dropdown
